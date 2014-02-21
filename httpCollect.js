@@ -3,7 +3,7 @@ var http = require('http'),
 
 var urlToFetch = process.argv[2];
 
-http.get(urlToFetch, function(response) {
+http.get(urlToFetch, function (response) {
 	response.pipe(bl(function (err, data){
 		if (err) {
 			return console.log(err)
